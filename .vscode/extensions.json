@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "pflannery.vscode-versionlens",
+        "ms-playwright.playwright",
+        "pflannery.vscode-versionlens",
+        "vscode-icons-team.vscode-icons",
+        "dbaeumer.vscode-eslint",
+        "usernamehw.errorlens",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens"
+    ]
+}
