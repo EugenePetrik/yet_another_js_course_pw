@@ -5,11 +5,13 @@
     "main": "index.js",
     "scripts": {
         "lint": "npx eslint . --ext .js --color --fix --quiet",
+        "check-all": "npx eslint . --ext .js --color --quiet",
         "test": "npx playwright test",
         "test:ui:mode": "npx playwright test --ui",
         "test:chrome": "npx playwright test --project=chromium",
         "codegen": "npx playwright codegen",
-        "report": "npx playwright show-report"
+        "report": "npx playwright show-report",
+        "prepare": "husky"
     },
     "keywords": [
         "playwright",
@@ -26,6 +28,7 @@
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-playwright": "^1.6.2",
         "eslint-plugin-prettier": "^5.2.1",
+        "husky": "^9.1.4",
         "prettier": "^3.3.3"
     }
 }
