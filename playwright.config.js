@@ -41,7 +41,7 @@ export default defineConfig({
     },
 
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://simonsmith.github.io/github-user-search/#/search',
+    baseURL: 'https://simonsmith.github.io',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: {
@@ -68,7 +68,7 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
       },
       /* Filter to only run tests with a title matching one of the patterns. */
-      grep: [new RegExp('@ui')],
+      grep: [new RegExp('@ui'), new RegExp('@regression')],
     },
 
     {

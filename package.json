@@ -6,7 +6,7 @@
     "scripts": {
         "lint": "npx eslint . --ext .js --color --fix --quiet",
         "check-all": "npx eslint . --ext .js --color --quiet",
-        "test": "npx playwright test",
+        "test": "npx playwright test --project=chromium --grep @regression",
         "test:ui:mode": "npx playwright test --ui",
         "test:chrome": "npx playwright test --project=chromium",
         "codegen": "npx playwright codegen",
