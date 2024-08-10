@@ -53,3 +53,15 @@ npm run codegen
 ```bash
 npm run report
 ```
+
+### JS Docs
+
+[JSDoc Reference](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
+
+### Playwright Fixtures
+
+[Test Fixtures](https://playwright.dev/docs/test-fixtures)
+
+### Playwright Parameterize tests
+
+[Parameterize tests](https://playwright.dev/docs/test-parameterize)
