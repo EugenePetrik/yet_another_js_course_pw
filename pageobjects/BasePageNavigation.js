@@ -1,19 +1,17 @@
 // @ts-check
 import { expect } from '@playwright/test';
-import { PageHolder } from './PageHolder';
+import { PageHolder } from '../src/tests/PageHolder.js';
 
 export class BasePageNavigation extends PageHolder {
-  /**
-   * @type {string}
-   */
-  pagePath;
-
-  orgDropdown = this.page.getByLabel('Open').first();
-
-  purchaserDropdown = this.page.getByPlaceholder('Purchaser');
+  constructor(page) {
+    super(page);
+    this.pagePath = ''; // Default path, can be overridden by subclasses
+    this.orgDropdown = this.page.getByLabel('Open').first();
+    this.purchaserDropdown = this.page.getByPlaceholder('Purchaser');
+  }
 
   async gotoDevicesPage() {
-    await this.page.goto('cc');
+    await this.page.goto('cc'); // Replace 'cc' with the correct URL or path
   }
 
   async navigateToThisPage(path) {
@@ -21,7 +19,6 @@ export class BasePageNavigation extends PageHolder {
   }
 
   async selectOrganization(org) {
-    // now select ACME
     await this.orgDropdown.click();
     await this.page.getByPlaceholder('Organization').fill(org);
     await this.page.getByRole('option', { name: org, exact: true }).click();
